@@ -9,7 +9,7 @@ import streamlit.components.v1 as components
 from pyecharts import options as opts
 from streamlit_echarts import st_pyecharts
 from pyecharts.charts import Bar, Line,Pie
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 import json
 
 
