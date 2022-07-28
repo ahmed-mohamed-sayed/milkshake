@@ -190,7 +190,7 @@ if selected == 'Sales Report':
     sheet_id = '1BNvKxtMtoxzw22HIfxezPw9UkoRCQibKkAB5xTgpvWw'
     sheet_name = 'SALES'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
-    # update every 10 mins
+    # update every 2 mins
     st_autorefresh(interval=2* 60 * 1000,key=None)
     @st.experimental_memo(ttl=120)
     def get_sales_data():
@@ -544,8 +544,8 @@ if selected == 'Cost Report':
     sheet_id = '1BNvKxtMtoxzw22HIfxezPw9UkoRCQibKkAB5xTgpvWw'
     sheet_name = 'COST'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
-    # update every 10 mins
-    st_autorefresh(interval=10* 60 * 1000,key=None)
+    # update every 2 mins
+    st_autorefresh(interval=2* 60 * 1000,key=None)
     @st.experimental_memo(ttl=600)
     def get_cost_data():
         df = pd.read_csv(url)
@@ -912,8 +912,8 @@ if selected == 'Profit Report':
     sheet_name_S = 'SALES'
     url_C = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name_C}'
     url_S = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name_S}'
-    # update every 10 mins
-    st_autorefresh(interval=10* 60 * 1000,key=None)
+    # update every 2 mins
+    st_autorefresh(interval=2* 60 * 1000,key=None)
     @st.experimental_memo(ttl=600)
     def get_pft_data():
         df_C = pd.read_csv(url_C)
